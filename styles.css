@@ -7,6 +7,7 @@ body {
     background-size: cover; /* Asegura que la imagen cubra todo el fondo */
     background-position: center; /* Centra la imagen de fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
+    overflow: hidden; /* Evita el desplazamiento si el contenido es más grande que la ventana */
 }
 
 .container {
