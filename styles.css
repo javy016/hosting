@@ -1,0 +1,111 @@
+body {
+    font-family: 'Times New Roman', Times, serif; /* Cambia la fuente a Times New Roman */
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+    background-image: url('imagenes/background.jpg');
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+input, select {
+    margin: 10px;
+    padding: 10px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 10px; /* Espacio reducido entre las imágenes */
+    justify-items: center; /* Centra las imágenes en cada celda */
+}
+
+.thumbnail {
+    border-radius: 20px; /* Bordes redondeados en las esquinas */
+    overflow: hidden; /* Esconde el desbordamiento */
+    transition: transform 0.2s; /* Transición para el efecto pop */
+    width: 600px; /* Ancho aumentado para las miniaturas */
+    height: 300px; /* Alto aumentado para las miniaturas */
+    padding: 1px; /* Espacio interno reducido para aumentar el espacio alrededor de la imagen */
+    box-sizing: border-box; /* Incluye el padding en el tamaño total */
+}
+
+.thumbnail:hover {
+    transform: scale(1.05); /* Efecto pop al pasar el ratón */
+}
+
+.thumbnail img {
+    width: 100%; /* Hace que la imagen ocupe todo el contenedor */
+    height: 100%; /* Hace que la imagen ocupe todo el contenedor */
+    object-fit: cover; /* Mantiene la proporción de la imagen y recorta si es necesario */
+    border-radius: 10px; /* Asegura que la imagen también tenga esquinas redondeadas */
+}
+
+.modal {
+    display: none; /* Asegúrate de que esté oculto inicialmente */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 90%; /* Ajusta el ancho del modal */
+    max-width: 900px; /* Aumenta el tamaño máximo de la imagen */
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s; /* Transición suave para el cambio de color */
+}
+
+.close:hover {
+    color: red; /* Cambia a rojo al pasar el ratón */
+}
+
+.pagination {
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 15px 30px; /* Aumenta el padding para hacer los botones más grandes */
+    font-size: 16px; /* Aumenta el tamaño de la fuente */
+    border: none; /* Elimina el borde predeterminado */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #007BFF; /* Color de fondo */
+    color: white; /* Color del texto */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+    font-family: 'Times New Roman', Times, serif; /* Asegura que los botones usen la misma fuente */
+}
+
+.pagination button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el ratón */
+}
+
+.pagination button:disabled {
+    background-color: #ccc; /* Color de fondo para botones deshabilitados */
+    cursor: not-allowed; /* Cambia el cursor para indicar que está deshabilitado */
+}
+
+h1 {
+    color: white; /* Cambia el color del texto a blanco */
+}
